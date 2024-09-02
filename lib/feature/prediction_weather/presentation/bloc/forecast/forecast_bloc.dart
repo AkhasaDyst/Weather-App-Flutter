@@ -21,7 +21,8 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
       FetchForecastData event, Emitter<ForecastState> emit) async {
     emit(ForecastLoading());
     try {
-      final result = await getForecastData();
+      final updatedUrl = 'https://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/${event.province.file}';
+      final result = await getForecastData(updatedUrl);
       emit(result is DataSuccess<ForecastData>
           ? ForecastLoaded(result.data!)
           : ForecastError(result.error?.message ?? 'An unknown error occurred'));

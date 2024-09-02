@@ -3,12 +3,13 @@ import 'package:xml/xml.dart' as xml;
 
 abstract class WeatherDataSource {
   Future<xml.XmlDocument> fetchWeatherData();
-  String get url; // Add this getter
+  void updateUrl(String newUrl); // Add method to update URL
+  String get url;
 }
 
 class WeatherDataSourceImpl implements WeatherDataSource {
   final Dio _dio;
-  final String _url;
+  String _url;
 
   WeatherDataSourceImpl({
     required Dio dio,
@@ -37,5 +38,11 @@ class WeatherDataSourceImpl implements WeatherDataSource {
   }
 
   @override
-  String get url => _url; // Implement the getter
+  void updateUrl(String newUrl) {
+    _url = newUrl; // Update the URL
+  }
+
+  @override
+  String get url => _url;
 }
+

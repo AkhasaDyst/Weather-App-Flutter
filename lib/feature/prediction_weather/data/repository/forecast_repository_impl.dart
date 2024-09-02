@@ -7,28 +7,32 @@ import '../../domain/repository/forecast_repository.dart';
 import '../datasources/forecast_datasources.dart';
 import '../models/forecast_data_model.dart';
 
-class WeatherRepositoryImpl implements ForecastRepository {
-  final WeatherDataSource dataSource;
+  class WeatherRepositoryImpl implements ForecastRepository {
+    final WeatherDataSource dataSource;
 
-  WeatherRepositoryImpl({required this.dataSource});
+    WeatherRepositoryImpl({required this.dataSource});
 
-  @override
-  Future<DataState<ForecastData>> getForecastData() async {
-    try {
-      final xmlDocument = await dataSource.fetchWeatherData();
-      final forecastData = parseForecastData(xmlDocument);
-
-      return DataSuccess(forecastData);
-    } on DioError catch (dioError) {
-      return DataFailed(dioError);
-    } catch (e) {
-      print('Unhandled exception: ${e.toString()}');
-      return DataFailed(DioError(
-        requestOptions: RequestOptions(path: dataSource.url),
-        error: e,
-      ));
+    void updateUrl(String newUrl) {
+      dataSource.updateUrl(newUrl); // Pass the new URL to the data source
     }
-  }
+
+    @override
+    Future<DataState<ForecastData>> getForecastData() async {
+      try {
+        final xmlDocument = await dataSource.fetchWeatherData();
+        final forecastData = parseForecastData(xmlDocument);
+
+        return DataSuccess(forecastData);
+      } on DioError catch (dioError) {
+        return DataFailed(dioError);
+      } catch (e) {
+        print('Unhandled exception: ${e.toString()}');
+        return DataFailed(DioError(
+          requestOptions: RequestOptions(path: dataSource.url),
+          error: e,
+        ));
+      }
+    }
 
   @override
   ForecastData parseForecastData(xml.XmlDocument document) {

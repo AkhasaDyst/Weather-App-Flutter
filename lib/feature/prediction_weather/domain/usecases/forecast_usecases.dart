@@ -7,7 +7,9 @@ class GetForecastData {
 
   GetForecastData(this.repository);
 
-  Future<DataState<ForecastData>> call() async {
+  Future<DataState<ForecastData>> call(String url) async {
+    repository.updateUrl(url);
     return await repository.getForecastData();
   }
 }
+
