@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 
+import 'config/theme/theme.dart';
 import 'feature/prediction_weather/data/datasources/forecast_datasources.dart';
 import 'feature/prediction_weather/data/repository/forecast_repository_impl.dart';
 import 'feature/prediction_weather/domain/usecases/forecast_usecases.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: WeatherTheme.themeData,
       home: ForecastScreen(),
     );
   }

@@ -26,3 +26,31 @@ class CustomTextWidget extends StatelessWidget {
     );
   }
 }
+
+
+class CustomTextWidgetBlack extends StatelessWidget {
+  final String text;
+  final int fontSize;
+  final Color color;
+
+  const CustomTextWidgetBlack({
+    Key? key,
+    required this.text,
+    required this.fontSize,
+    this.color = Colors.black87,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.lato(
+        textStyle: TextStyle(
+          fontSize: fontSize.toDouble(),
+          color: color,
+        ),
+      ),
+    );
+  }
+}
+

@@ -34,5 +34,5 @@ String formatTimestampContent(String timestamp) {
   DateFormat dateFormatter = DateFormat('d MMMM', 'id_ID');
   DateFormat timeFormatter = DateFormat('HH:mm');
 
-  return '${dayFormatter.format(dateTime)}, ${dateFormatter.format(dateTime)} ${timeFormatter.format(dateTime)}';
+  return '${timeFormatter.format(dateTime)}';
 }
