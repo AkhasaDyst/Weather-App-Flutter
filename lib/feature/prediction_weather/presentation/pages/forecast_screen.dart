@@ -179,7 +179,7 @@ class _ForecastViewState extends State<ForecastView> {
                     : null;
               }
               final weatherCode = int.parse(
-                selectedArea!.parameters[5].timeranges[0].values[0].content,
+                selectedArea!.parameters[6].timeranges[0].values[0].content,
               );
               final imagePath = weatherCodeImages[weatherCode] ?? 'assets/images/5berawan.png';
 

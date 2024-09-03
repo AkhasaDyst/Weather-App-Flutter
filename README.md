@@ -1,16 +1,35 @@
-# weather
+# Weather App
+Weather App using BMKG API, on Flutter Clean Architecture
+![Screenshoot](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/ss.png)
 
-Weather App using BMKG API
+## API BMKG
+![API URL](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/url.png)
+Using the BMKG Forecast Weather API to predict weather on Indonesia Province and Kabupaten, until the day after tomorrow
+<br>
+![Postman](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/postman.png)
+Try the API using Postman, it return a XML data file
 
-## Getting Started
+## Clean Architecture
+![Clean Architecture](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/cleanarch.png)
+![Structure Code](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/structure.png)
+Clean Architecture separate on 3 layer, Presentation, Domain, and Data. This lead to the codebase more maintainable and allows for easier updates or changes to specific components without affecting the entire application.
+<br>
 
-This project is a starting point for a Flutter application.
+## BLoC - State Management
+![Clean Architecture](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/bloc.png)
+BLoC (Business Logic Components) provides good documentation about different scenarios. It separates the business logic from the code, thus making the code understandable. Using BLoC makes the outcome more testable. It is easy to keep track of different states that occur during product development.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+## CI/CD
+![CI/CD](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/cicd.png)
+[CI/CD using Github Action](https://github.com/AkhasaDyst/Weather-App-Flutter/actions)
+<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Release app build (.apk)
+![Release APK](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/apk.png)
+[Release APK](https://github.com/AkhasaDyst/Weather-App-Flutter/actions/runs/10680021557)
+<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+

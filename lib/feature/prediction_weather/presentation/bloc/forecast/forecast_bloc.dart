@@ -5,11 +5,6 @@ import '../../../domain/usecases/forecast_usecases.dart';
 import 'forecast_events.dart';
 import 'forecast_state.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../domain/usecases/forecast_usecases.dart';
-import 'forecast_events.dart';
-import 'forecast_state.dart';
-
 class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
   final GetForecastData getForecastData;
 
