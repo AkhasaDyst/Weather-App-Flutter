@@ -1,9 +1,9 @@
 # Weather App
 Weather App using BMKG API, on Flutter Clean Architecture
-![Screenshoot](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/ss.png)
+![Screenshoot](https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/ss.png)
 
 ## API BMKG
-![API URL](https://raw.githubusercontent.com/AkhasaDyst/F-AND24001121-synrgy7-yud-Firebase-CICD-ch8/master/assets/images/screen/url.png)
+![API URL](https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/url.png)
 Using the BMKG Forecast Weather API to predict weather on Indonesia Province and Kabupaten, until the day after tomorrow
 <br>
 ![Postman](https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/postman.png)
