@@ -1,6 +1,6 @@
 # Weather App
 Weather App using BMKG API, on Flutter Clean Architecture
-![Screenshoot](https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/ss.png)
+<img src="https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/ss.png" width="128"/>
 
 ## API BMKG
 ![API URL](https://raw.githubusercontent.com/AkhasaDyst/Weather-App-Flutter/master/assets/images/screen/url.png)
