@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import 'config/theme/theme.dart';
 import 'feature/prediction_weather/data/datasources/forecast_datasources.dart';
@@ -40,10 +41,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: WeatherTheme.themeData,
-      home: ForecastScreen(),
+    return Sizer(
+        builder: (context, orientation, screenType) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: WeatherTheme.themeData,
+          home: ForecastScreen(),
+        );
+      }
     );
   }
 }
